@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — TechMHA</title>
+<meta name="description" content="Selected AI projects from TechMHA: enterprise automation systems, AI agents, Chatzy local AI chatbots, LLM-powered chatbots, AI customer support, and intelligent document processing.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="brand" aria-label="TechMHA — Home">
+      <span class="brand-mark"><img src="assets/logo.svg" alt="TechMHA logo"></span>
+      <span class="brand-name">TechMHA</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="team.html">Team</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-primary btn-sm desktop-only">
+        Get In Touch
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="team.html">Team</a>
+  <a href="services.html">Services</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-primary">
+    Get In Touch
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+</div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb reveal"><a href="index.html">Home</a><span>/</span><span>Projects</span></div>
+      <span class="eyebrow reveal">Selected Work</span>
+      <h1 class="h1 reveal">AI projects built for real business operations.</h1>
+      <p class="lead reveal" style="max-width:640px;margin-top:18px;">A selection of the AI automation, agent, and chatbot work TechMHA has delivered through client engagements — alongside the open-source tools this work is built on.</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container">
+      <div class="grid grid-3 reveal-stagger" id="projects-grid">
+
+        <article class="project-card" id="enterprise-automation">
+          <a href="assets/n8n-solar-flare-workflow.png" target="_blank" rel="noopener" class="project-media project-media-shot" aria-label="Open full-size screenshot of the NASA Solar Flare Monitor n8n workflow">
+            <img src="assets/n8n-solar-flare-workflow.png" alt="Real n8n workflow: Schedule Trigger, NASA solar flare data node, If condition, and two PostBin webhook actions" loading="lazy">
+            <span class="project-media-badge">Real workflow screenshot</span>
+          </a>
+          <div class="project-body">
+            <span class="project-tag">Automation</span>
+            <h3>NASA Solar Flare Monitor</h3>
+            <p>A scheduled n8n workflow that polls NASA's DONKI API for solar flare activity, branches on the result, and fires webhook actions for each outcome — a small, real example of the automations TechMHA builds for clients.</p>
+            <div class="project-stack"><span>n8n</span><span>NASA API</span><span>Webhooks</span></div>
+            <div class="project-actions">
+              <a href="assets/n8n-solar-flare-workflow.png" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                View Workflow
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a href="https://github.com/n8n-io/n8n" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="12" rx="3"/><path d="M8 10h.01M12 10h.01M16 10h.01M9 21l3-4 3 4"/></svg></div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">AI Agents</span>
+            <h3>AI Agents for Business Operations</h3>
+            <p>Task-executing AI agents that handle multi-step operational work — not just answer questions. No client screenshot available yet, so this card links to the open-source agent framework this category of work is built on.</p>
+            <div class="project-stack"><span>OpenAI API</span><span>Agentic AI</span></div>
+            <div class="project-actions">
+              <a href="https://github.com/TransformerOptimus/SuperAGI" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+                View on GitHub
+                <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" width="15" height="15"><path d="M12 2C6.48 2 2 6.58 2 12.19c0 4.49 2.87 8.3 6.84 9.64.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.51-3.5-.7-3.72-1.34-.13-.33-.68-1.34-1.16-1.62-.4-.22-.96-.75-.01-.76.89-.01 1.53.83 1.74 1.18 1.02 1.75 2.65 1.26 3.3.96.1-.75.4-1.26.72-1.55-2.53-.29-5.18-1.29-5.18-5.7 0-1.26.44-2.29 1.16-3.09-.12-.29-.5-1.47.11-3.06 0 0 .95-.31 3.11 1.18a10.6 10.6 0 0 1 5.66 0c2.16-1.49 3.11-1.18 3.11-1.18.61 1.59.23 2.77.11 3.06.72.8 1.16 1.82 1.16 3.09 0 4.42-2.66 5.4-5.19 5.69.41.36.77 1.07.77 2.16 0 1.56-.01 2.82-.01 3.2 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.19C22 6.58 17.52 2 12 2Z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="12" rx="3"/><path d="M8 10h.01M12 10h.01M16 10h.01M9 21l3-4 3 4"/></svg></div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Chatbots</span>
+            <h3>Chatzy — Local AI Chatbots</h3>
+            <p>On-premise, privacy-friendly AI chatbot deployments for organizations that can't send data to third-party clouds. No client screenshot available yet — linked to the open-source local-LLM runtime this is built on.</p>
+            <div class="project-stack"><span>Chatzy</span><span>Local LLMs</span></div>
+            <div class="project-actions">
+              <a href="https://github.com/mudler/LocalAI" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+                View on GitHub
+                <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" width="15" height="15"><path d="M12 2C6.48 2 2 6.58 2 12.19c0 4.49 2.87 8.3 6.84 9.64.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.51-3.5-.7-3.72-1.34-.13-.33-.68-1.34-1.16-1.62-.4-.22-.96-.75-.01-.76.89-.01 1.53.83 1.74 1.18 1.02 1.75 2.65 1.26 3.3.96.1-.75.4-1.26.72-1.55-2.53-.29-5.18-1.29-5.18-5.7 0-1.26.44-2.29 1.16-3.09-.12-.29-.5-1.47.11-3.06 0 0 .95-.31 3.11 1.18a10.6 10.6 0 0 1 5.66 0c2.16-1.49 3.11-1.18 3.11-1.18.61 1.59.23 2.77.11 3.06.72.8 1.16 1.82 1.16 3.09 0 4.42-2.66 5.4-5.19 5.69.41.36.77 1.07.77 2.16 0 1.56-.01 2.82-.01 3.2 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.19C22 6.58 17.52 2 12 2Z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="12" rx="3"/><path d="M8 10h.01M12 10h.01M16 10h.01M9 21l3-4 3 4"/></svg></div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Chatbots</span>
+            <h3>LLM-Powered Chatbots</h3>
+            <p>Conversational chatbots built on large language models, integrated directly into existing business systems. No client screenshot available yet — linked to the open-source LLM chat project this category draws on.</p>
+            <div class="project-stack"><span>LLMs</span><span>OpenAI API</span></div>
+            <div class="project-actions">
+              <a href="https://github.com/nomic-ai/gpt4all" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+                View on GitHub
+                <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" width="15" height="15"><path d="M12 2C6.48 2 2 6.58 2 12.19c0 4.49 2.87 8.3 6.84 9.64.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.51-3.5-.7-3.72-1.34-.13-.33-.68-1.34-1.16-1.62-.4-.22-.96-.75-.01-.76.89-.01 1.53.83 1.74 1.18 1.02 1.75 2.65 1.26 3.3.96.1-.75.4-1.26.72-1.55-2.53-.29-5.18-1.29-5.18-5.7 0-1.26.44-2.29 1.16-3.09-.12-.29-.5-1.47.11-3.06 0 0 .95-.31 3.11 1.18a10.6 10.6 0 0 1 5.66 0c2.16-1.49 3.11-1.18 3.11-1.18.61 1.59.23 2.77.11 3.06.72.8 1.16 1.82 1.16 3.09 0 4.42-2.66 5.4-5.19 5.69.41.36.77 1.07.77 2.16 0 1.56-.01 2.82-.01 3.2 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.19C22 6.58 17.52 2 12 2Z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18v-3a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v3"/><rect x="2.5" y="17" width="4" height="5" rx="1.2"/><rect x="17.5" y="17" width="4" height="5" rx="1.2"/><path d="M12 9V5"/><circle cx="12" cy="4" r="1.2"/></svg></div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Support</span>
+            <h3>AI Customer Support Systems</h3>
+            <p>Always-on support systems that resolve routine requests instantly and escalate complex cases with full context. No client screenshot available yet — linked to the open-source support platform this category draws on.</p>
+            <div class="project-stack"><span>Chatzy</span><span>Support AI</span></div>
+            <div class="project-actions">
+              <a href="https://github.com/chatwoot/chatwoot" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+                View on GitHub
+                <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" width="15" height="15"><path d="M12 2C6.48 2 2 6.58 2 12.19c0 4.49 2.87 8.3 6.84 9.64.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.51-3.5-.7-3.72-1.34-.13-.33-.68-1.34-1.16-1.62-.4-.22-.96-.75-.01-.76.89-.01 1.53.83 1.74 1.18 1.02 1.75 2.65 1.26 3.3.96.1-.75.4-1.26.72-1.55-2.53-.29-5.18-1.29-5.18-5.7 0-1.26.44-2.29 1.16-3.09-.12-.29-.5-1.47.11-3.06 0 0 .95-.31 3.11 1.18a10.6 10.6 0 0 1 5.66 0c2.16-1.49 3.11-1.18 3.11-1.18.61 1.59.23 2.77.11 3.06.72.8 1.16 1.82 1.16 3.09 0 4.42-2.66 5.4-5.19 5.69.41.36.77 1.07.77 2.16 0 1.56-.01 2.82-.01 3.2 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.19C22 6.58 17.52 2 12 2Z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M9.5 12h5M9.5 15.5h5"/></svg></div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Data &amp; Documents</span>
+            <h3>Intelligent Document Processing</h3>
+            <p>Automated pipelines that read, classify, and extract structured data from documents at scale. No client screenshot available yet — linked to the open-source document-processing toolkit this category draws on.</p>
+            <div class="project-stack"><span>IDP</span><span>Python</span></div>
+            <div class="project-actions">
+              <a href="https://github.com/Unstructured-IO/unstructured" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+                View on GitHub
+                <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" width="15" height="15"><path d="M12 2C6.48 2 2 6.58 2 12.19c0 4.49 2.87 8.3 6.84 9.64.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.51-3.5-.7-3.72-1.34-.13-.33-.68-1.34-1.16-1.62-.4-.22-.96-.75-.01-.76.89-.01 1.53.83 1.74 1.18 1.02 1.75 2.65 1.26 3.3.96.1-.75.4-1.26.72-1.55-2.53-.29-5.18-1.29-5.18-5.7 0-1.26.44-2.29 1.16-3.09-.12-.29-.5-1.47.11-3.06 0 0 .95-.31 3.11 1.18a10.6 10.6 0 0 1 5.66 0c2.16-1.49 3.11-1.18 3.11-1.18.61 1.59.23 2.77.11 3.06.72.8 1.16 1.82 1.16 3.09 0 4.42-2.66 5.4-5.19 5.69.41.36.77 1.07.77 2.16 0 1.56-.01 2.82-.01 3.2 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.19C22 6.58 17.52 2 12 2Z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="cta-panel reveal">
+        <span class="eyebrow" style="justify-content:center;">Start a Project</span>
+        <h2>Have something similar in mind?</h2>
+        <p class="lead">Tell us what you're trying to automate or build — we'll tell you honestly if it's a good fit.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary">
+            Get in Touch
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="TechMHA — Home">
+          <span class="brand-mark"><img src="assets/logo.svg" alt="TechMHA logo"></span>
+          <span class="brand-name">TechMHA</span>
+        </a>
+        <p>AI automation agency building AI agents, LLM chatbots and workflow automation — and training the teams who will run them.</p>
+        <div class="footer-social">
+          <a class="social-btn" href="https://www.linkedin.com/in/muhammadhasaan-ajmal-hashmi-a7602b396" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.2v.01M12.5 17v-4a2.2 2.2 0 0 1 4.4 0v4M12.5 10.5V17"/></svg>
+          </a>
+          <a class="social-btn" href="mailto:hassan.ajmal123@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">AI Workflow Automation</a></li>
+          <li><a href="services.html">AI Agents &amp; Chatbots</a></li>
+          <li><a href="services.html">Enterprise AI Consulting</a></li>
+          <li><a href="services.html">Training &amp; Upskilling</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hassan.ajmal123@gmail.com">hassan.ajmal123@gmail.com</a></li>
+          <li><a href="tel:+923354517844">+92 335 4517844</a></li>
+          <li><span class="text-muted">Lahore, Pakistan</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> TechMHA. All rights reserved.</span>
+      <span>Built with a modern dark design system.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/db.js"></script>
+<script src="js/site-render.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

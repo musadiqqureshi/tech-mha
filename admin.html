@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — TechMHA</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-body">
+
+<!-- ================= LOGIN SCREEN ================= -->
+<div class="admin-login" id="login-screen">
+  <div class="admin-login-card">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><img src="assets/logo.svg" alt="TechMHA logo"></span>
+      <span class="brand-name">TechMHA</span>
+    </a>
+    <h1>Admin sign in</h1>
+    <p class="text-sm">Sign in with the admin account you created in Supabase.</p>
+
+    <form id="login-form" novalidate>
+      <div class="field">
+        <label for="login-email">Email</label>
+        <input type="email" id="login-email" name="email" placeholder="admin@yourdomain.com" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" name="password" placeholder="••••••••" autocomplete="current-password" required>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%;" id="login-submit">Sign In</button>
+      <div class="admin-login-error" id="login-error"></div>
+    </form>
+
+    <p class="text-xs text-muted" style="margin-top:20px;text-align:center;" id="config-warning" style="display:none;"></p>
+  </div>
+</div>
+
+<!-- ================= ADMIN SHELL ================= -->
+<div class="admin-shell" id="admin-shell" style="display:none;">
+  <aside class="admin-sidebar">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><img src="assets/logo.svg" alt="TechMHA logo"></span>
+      <span class="brand-name">TechMHA</span>
+    </a>
+
+    <div class="admin-nav-link active" data-panel="team-panel">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Team
+    </div>
+    <div class="admin-nav-link" data-panel="services-panel">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.6"/></svg>
+      Services
+    </div>
+    <div class="admin-nav-link" data-panel="content-panel">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M9.5 12h5M9.5 15.5h5"/></svg>
+      Site Content
+    </div>
+
+    <div class="admin-sidebar-foot">
+      <a href="index.html" class="admin-nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 12 4l9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>
+        View site
+      </a>
+      <div class="admin-nav-link" id="logout-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg>
+        Sign out
+      </div>
+    </div>
+  </aside>
+
+  <main class="admin-main">
+
+    <!-- ============ TEAM PANEL ============ -->
+    <section class="admin-panel active" id="team-panel">
+      <div class="admin-head">
+        <div>
+          <h1>Team</h1>
+          <p class="text-muted">Mark one person as CEO to feature them in the spotlight on the Team page. Everyone else shows in the team grid.</p>
+        </div>
+        <button class="btn btn-primary btn-sm" id="add-team-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          Add team member
+        </button>
+      </div>
+      <div class="admin-table-wrap" id="team-table"></div>
+    </section>
+
+    <!-- ============ SERVICES PANEL ============ -->
+    <section class="admin-panel" id="services-panel">
+      <div class="admin-head">
+        <div>
+          <h1>Services</h1>
+          <p class="text-muted">These appear as cards on the homepage and Services page.</p>
+        </div>
+        <button class="btn btn-primary btn-sm" id="add-service-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          Add service
+        </button>
+      </div>
+      <div class="admin-table-wrap" id="services-table"></div>
+    </section>
+
+    <!-- ============ SITE CONTENT PANEL ============ -->
+    <section class="admin-panel" id="content-panel">
+      <div class="admin-head">
+        <div>
+          <h1>Site Content</h1>
+          <p class="text-muted">Edit small pieces of text used across the site. Leave a field blank to keep the page's built-in default.</p>
+        </div>
+        <button class="btn btn-primary btn-sm" id="save-content-btn">Save changes</button>
+      </div>
+      <div class="admin-table-wrap" style="padding:24px;">
+        <div class="field">
+          <label for="content-hero-heading">Homepage hero heading</label>
+          <input type="text" id="content-hero-heading" name="hero_heading" placeholder="I build practical AI systems — and teach the people who'll build the next ones.">
+        </div>
+        <div class="field">
+          <label for="content-hero-lead">Homepage hero paragraph</label>
+          <textarea id="content-hero-lead" name="hero_lead" placeholder="Short paragraph under the hero heading..."></textarea>
+        </div>
+        <div class="field">
+          <label for="content-contact-email">Contact email</label>
+          <input type="email" id="content-contact-email" name="contact_email" placeholder="hassan.ajmal123@gmail.com">
+        </div>
+        <div class="field">
+          <label for="content-contact-phone">Contact phone</label>
+          <input type="text" id="content-contact-phone" name="contact_phone" placeholder="+92 335 4517844">
+        </div>
+        <div class="field mt-0">
+          <label for="content-location">Location</label>
+          <input type="text" id="content-location" name="location" placeholder="Lahore, Pakistan">
+        </div>
+      </div>
+      <p class="text-xs text-muted" style="margin-top:14px;">Note: these values are stored in Supabase but the current page templates render their own built-in text by default. Wire a page to read a given key with <code>TechMHA.db.getSiteContent()</code> if you want it to reflect live here.</p>
+    </section>
+
+  </main>
+</div>
+
+<!-- ================= TEAM MEMBER MODAL ================= -->
+<div class="modal-overlay" id="team-modal">
+  <div class="modal">
+    <h3 id="team-modal-title">Add team member</h3>
+    <p class="modal-sub">Fields marked with a photo URL should point to any publicly accessible image (e.g. uploaded to Supabase Storage).</p>
+    <form id="team-form">
+      <input type="hidden" id="team-id">
+      <div class="field">
+        <label for="team-name">Full name *</label>
+        <input type="text" id="team-name" required>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="team-role">Role / title</label>
+          <input type="text" id="team-role" placeholder="Lead AI Engineer">
+        </div>
+        <div class="field">
+          <label for="team-order">Display order</label>
+          <input type="number" id="team-order" value="0">
+        </div>
+      </div>
+      <div class="field">
+        <label for="team-headline">Headline <span class="text-muted">(CEO spotlight only)</span></label>
+        <input type="text" id="team-headline" placeholder="Larger heading shown on the CEO card">
+      </div>
+      <div class="field">
+        <label for="team-bio">Short bio</label>
+        <textarea id="team-bio" placeholder="A sentence or two about this person"></textarea>
+      </div>
+      <div class="field">
+        <label for="team-photo">Photo URL</label>
+        <input type="url" id="team-photo" placeholder="https://...">
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="team-linkedin">LinkedIn URL</label>
+          <input type="url" id="team-linkedin" placeholder="https://linkedin.com/in/...">
+        </div>
+        <div class="field">
+          <label for="team-email">Email</label>
+          <input type="email" id="team-email" placeholder="name@techmha.com">
+        </div>
+      </div>
+      <div class="field">
+        <label for="team-tags">Tags <span class="text-muted">(comma separated, CEO spotlight only)</span></label>
+        <input type="text" id="team-tags" placeholder="Agentic AI, Prompt Engineering">
+      </div>
+      <label class="flex items-center gap-8" style="cursor:pointer;">
+        <input type="checkbox" id="team-is-ceo" style="width:16px;height:16px;">
+        <span class="text-sm">Feature as CEO spotlight</span>
+      </label>
+      <div class="modal-foot">
+        <button type="button" class="btn btn-secondary btn-sm" id="team-modal-cancel">Cancel</button>
+        <button type="submit" class="btn btn-primary btn-sm">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ================= SERVICE MODAL ================= -->
+<div class="modal-overlay" id="service-modal">
+  <div class="modal">
+    <h3 id="service-modal-title">Add service</h3>
+    <form id="service-form">
+      <input type="hidden" id="service-id">
+      <div class="field">
+        <label for="service-title">Title *</label>
+        <input type="text" id="service-title" required>
+      </div>
+      <div class="field">
+        <label for="service-description">Description</label>
+        <textarea id="service-description"></textarea>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="service-tags-label">Footer label</label>
+          <input type="text" id="service-tags-label" placeholder="n8n · Make · Zapier">
+        </div>
+        <div class="field">
+          <label for="service-order">Display order</label>
+          <input type="number" id="service-order" value="0">
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button type="button" class="btn btn-secondary btn-sm" id="service-modal-cancel">Cancel</button>
+        <button type="submit" class="btn btn-primary btn-sm">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="toast-stack" id="toast-stack"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/db.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

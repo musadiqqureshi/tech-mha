@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechMHA — AI Automation Agency | AI Agents, Chatbots &amp; Workflow Automation</title>
+<meta name="description" content="TechMHA is an AI automation agency building AI agents, LLM chatbots, workflow automation and enterprise AI training with n8n, Make, Zapier and OpenAI APIs.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="brand" aria-label="TechMHA — Home">
+      <span class="brand-mark"><img src="assets/logo.svg" alt="TechMHA logo"></span>
+      <span class="brand-name">TechMHA</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="team.html">Team</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-primary btn-sm desktop-only">
+        Get In Touch
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="team.html">Team</a>
+  <a href="services.html">Services</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-primary">
+    Get In Touch
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+</div>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <span class="eyebrow">AI Automation Agency · Workflow &amp; Agent Engineering</span>
+        <h1>We build practical AI systems — and teach the people who'll build the next ones.</h1>
+        <p class="lead">TechMHA designs AI agents, LLM-powered chatbots and workflow automation with n8n, Make, Zapier and OpenAI APIs — and trains teams to run it themselves.</p>
+        <div class="hero-actions">
+          <a href="projects.html" class="btn btn-primary">
+            View Our Work
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="contact.html" class="btn btn-secondary">
+            Start a Project
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <div class="num">9+</div>
+            <div class="label">Years of experience</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="num">2</div>
+            <div class="label">Companies founded</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="num">6</div>
+            <div class="label">Institutions served</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-visual-glow"></div>
+        <button type="button" class="workflow-card" id="workflow-open-trigger" aria-haspopup="dialog" aria-controls="workflow-modal">
+          <span class="workflow-card-label">
+            <span class="pulse-dot"></span>
+            Explore Workflow
+          </span>
+          <span class="workflow-card-frame">
+            <img src="assets/n8n-solar-flare-workflow.png" alt="Real n8n automation workflow: Schedule Trigger connects to a NASA solar-flare data node, an If condition, and two PostBin webhook actions" loading="lazy">
+            <span class="workflow-card-overlay">
+              <span class="workflow-card-cta">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                View full workflow
+              </span>
+            </span>
+          </span>
+          <span class="workflow-card-foot">
+            <span class="workflow-card-title">NASA Solar Flare Monitor</span>
+            <span class="workflow-card-sub">Live n8n automation · 5 nodes</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WORKFLOW PREVIEW MODAL ================= -->
+  <div class="workflow-modal-overlay" id="workflow-modal" role="dialog" aria-modal="true" aria-labelledby="workflow-modal-title">
+    <div class="workflow-modal">
+      <button type="button" class="workflow-modal-close" id="workflow-modal-close" aria-label="Close workflow preview">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="workflow-modal-head">
+        <span class="eyebrow" style="margin-bottom:8px;">Live n8n Workflow</span>
+        <h3 id="workflow-modal-title">NASA Solar Flare Monitor</h3>
+        <p class="text-sm text-muted">Click any node below to see what it does. This is a real, working automation — not a mockup.</p>
+      </div>
+      <div class="workflow-modal-canvas">
+        <img src="assets/n8n-solar-flare-workflow.png" alt="n8n workflow: Schedule Trigger to NASA data node to If condition to two PostBin webhook actions">
+        <button type="button" class="workflow-node-hotspot" style="left:14.9%;top:47.6%;" data-node="trigger" aria-label="Schedule Trigger node"><span></span></button>
+        <button type="button" class="workflow-node-hotspot" style="left:34.8%;top:47.6%;" data-node="nasa" aria-label="NASA node"><span></span></button>
+        <button type="button" class="workflow-node-hotspot" style="left:55.7%;top:47.6%;" data-node="if" aria-label="If node"><span></span></button>
+        <button type="button" class="workflow-node-hotspot" style="left:78.4%;top:26.8%;" data-node="posttrue" aria-label="PostBin true node"><span></span></button>
+        <button type="button" class="workflow-node-hotspot" style="left:78.4%;top:63.4%;" data-node="postfalse" aria-label="PostBin false node"><span></span></button>
+      </div>
+      <div class="workflow-node-detail" id="workflow-node-detail">
+        <p class="text-sm text-muted">Click a highlighted node on the workflow to read what it does.</p>
+      </div>
+      <div class="workflow-modal-foot">
+        <a href="projects.html#enterprise-automation" class="btn btn-primary btn-sm">
+          View related project
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <button type="button" class="btn btn-secondary btn-sm" id="workflow-modal-close-2">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MARQUEE 1 ================= -->
+  <div class="marquee-section" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">AI AUTOMATION <span class="sep">●</span></span>
+      <span class="marquee-item">AGENTIC AI <span class="sep">●</span></span>
+      <span class="marquee-item">PROMPT ENGINEERING <span class="sep">●</span></span>
+      <span class="marquee-item">LLM INTEGRATION <span class="sep">●</span></span>
+      <span class="marquee-item">AI AGENTS <span class="sep">●</span></span>
+      <span class="marquee-item">n8n · MAKE · ZAPIER <span class="sep">●</span></span>
+      <span class="marquee-item">OPENAI API <span class="sep">●</span></span>
+      <!-- duplicate for seamless loop -->
+      <span class="marquee-item">AI AUTOMATION <span class="sep">●</span></span>
+      <span class="marquee-item">AGENTIC AI <span class="sep">●</span></span>
+      <span class="marquee-item">PROMPT ENGINEERING <span class="sep">●</span></span>
+      <span class="marquee-item">LLM INTEGRATION <span class="sep">●</span></span>
+      <span class="marquee-item">AI AGENTS <span class="sep">●</span></span>
+      <span class="marquee-item">n8n · MAKE · ZAPIER <span class="sep">●</span></span>
+      <span class="marquee-item">OPENAI API <span class="sep">●</span></span>
+    </div>
+  </div>
+
+  <!-- ================= ABOUT PREVIEW ================= -->
+  <section class="section section-alt">
+    <div class="container about-grid">
+      <div class="about-visual reveal">
+        <span class="initials">MH</span>
+        <div class="badge">
+          <span class="pulse-dot"></span>
+          Founder &amp; CEO, TechMHA Pakistan
+        </div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">About</span>
+        <h2>AI engineer, educator, and enterprise automation consultant.</h2>
+        <p class="lead" style="margin-top:18px;">Muhammad Hassan Ajmal Hashmi is an AI Automation Consultant, entrepreneur, and Computer Science educator with 9 years of experience across industry and academia — Founder &amp; CEO of TechMHA Pakistan and Tech Solutions Pakistan, and Head of Department, Computer Science at KIPS College.</p>
+        <p style="margin-top:14px;">He delivers enterprise AI solutions, workflow automation, generative AI applications and business process automation using Python, n8n, Make, Zapier, OpenAI APIs and large language models — alongside professional training in Prompt Engineering and Agentic AI.</p>
+        <div class="pill-list">
+          <span class="pill">Artificial Intelligence</span>
+          <span class="pill">Generative AI</span>
+          <span class="pill">Agentic AI</span>
+          <span class="pill">Prompt Engineering</span>
+          <span class="pill">AI Automation</span>
+        </div>
+        <a href="about.html" class="btn btn-secondary" style="margin-top:28px;">
+          Full Background
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATS ================= -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="stats-bar reveal-stagger">
+        <div class="stat-block">
+          <div class="stat-num"><span data-counter="9" data-suffix="+">0+</span></div>
+          <div class="stat-label">Years of Experience</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num"><span data-counter="2">0</span></div>
+          <div class="stat-label">Companies Founded</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num"><span data-counter="6" data-suffix="+">0+</span></div>
+          <div class="stat-label">Institutions &amp; Organizations</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num"><span data-counter="6">0</span></div>
+          <div class="stat-label">Core AI Service Areas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="section section-alt" id="services">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">What I Do</span>
+        <h2>End-to-end AI &amp; automation, built for real operations.</h2>
+        <p class="lead" style="margin-top:14px;">From a single automated workflow to a full AI-driven transformation program.</p>
+      </div>
+      <div class="grid grid-3 reveal-stagger" data-services-grid>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2.4"/><circle cx="19" cy="6" r="2.4"/><circle cx="12" cy="18" r="2.4"/><path d="M7 7.5 12 15.5M17 7.5 12 15.5"/></svg>
+          </div>
+          <h3>AI Workflow Automation</h3>
+          <p>End-to-end automation design using n8n, Make and Zapier to connect your tools and remove manual, repetitive work.</p>
+          <div class="card-foot">n8n · Make · Zapier</div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="12" rx="3"/><path d="M8 10h.01M12 10h.01M16 10h.01M9 21l3-4 3 4"/></svg>
+          </div>
+          <h3>AI Agents &amp; LLM Chatbots</h3>
+          <p>Custom AI agents and LLM-powered chatbots — including local, private deployments — for support, sales and internal operations.</p>
+          <div class="card-foot">OpenAI API · Local LLMs</div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.6"/></svg>
+          </div>
+          <h3>Enterprise AI Consulting</h3>
+          <p>AI strategy, digital transformation roadmaps, and hands-on delivery for startups, SMEs and universities.</p>
+          <div class="card-foot">Strategy · Delivery</div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M9.5 12h5M9.5 15.5h5"/></svg>
+          </div>
+          <h3>Intelligent Document Processing</h3>
+          <p>Automated extraction, classification and processing of documents using AI — cutting manual data entry down to minutes.</p>
+          <div class="card-foot">IDP · Data Pipelines</div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18v-3a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v3"/><rect x="2.5" y="17" width="4" height="5" rx="1.2"/><rect x="17.5" y="17" width="4" height="5" rx="1.2"/><path d="M12 9V5"/><circle cx="12" cy="4" r="1.2"/></svg>
+          </div>
+          <h3>AI Customer Support Systems</h3>
+          <p>24/7 AI-driven support systems that resolve common requests instantly and route complex cases to your team.</p>
+          <div class="card-foot">Chatzy · Support AI</div>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 12 4l9 4.5-9 4.5-9-4.5Z"/><path d="M6.5 10.3V15c0 1.5 2.5 3 5.5 3s5.5-1.5 5.5-3v-4.7"/></svg>
+          </div>
+          <h3>Training &amp; Upskilling</h3>
+          <p>Professional training in Prompt Engineering, Agentic AI, AI Automation and LLM applications for teams and institutions.</p>
+          <div class="card-foot">Workshops · Cohorts</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROCESS ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Process</span>
+        <h2>A clear path from idea to a working AI system.</h2>
+      </div>
+      <div class="process-list reveal-stagger">
+        <div class="process-item">
+          <div class="process-num">01</div>
+          <div class="process-body">
+            <h3>Discover</h3>
+            <p>Understand your workflows, tools and bottlenecks to find where AI and automation create the most value.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">02</div>
+          <div class="process-body">
+            <h3>Design</h3>
+            <p>Architect the automation, AI agent or chatbot solution, mapped against your existing systems and data.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">03</div>
+          <div class="process-body">
+            <h3>Build</h3>
+            <p>Develop and integrate the solution using n8n, Make, Zapier and OpenAI APIs, with your team in the loop.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">04</div>
+          <div class="process-body">
+            <h3>Deploy</h3>
+            <p>Launch into your live environment with monitoring in place, and handover documentation.</p>
+          </div>
+        </div>
+        <div class="process-item">
+          <div class="process-num">05</div>
+          <div class="process-body">
+            <h3>Support &amp; Train</h3>
+            <p>Ongoing support plus training so your team can confidently operate and extend the system.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURED PROJECTS ================= -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Featured Projects</span>
+        <h2>AI projects built for real business operations.</h2>
+      </div>
+      <div class="grid grid-3 reveal-stagger">
+
+        <article class="project-card">
+          <a href="assets/n8n-solar-flare-workflow.png" target="_blank" rel="noopener" class="project-media project-media-shot" aria-label="Open full-size screenshot of the NASA Solar Flare Monitor n8n workflow">
+            <img src="assets/n8n-solar-flare-workflow.png" alt="Real n8n workflow: Schedule Trigger, NASA solar flare data node, If condition, and two PostBin webhook actions" loading="lazy">
+            <span class="project-media-badge">Real workflow screenshot</span>
+          </a>
+          <div class="project-body">
+            <span class="project-tag">Automation</span>
+            <h3>NASA Solar Flare Monitor</h3>
+            <p>A scheduled n8n workflow that polls NASA's DONKI API, branches on the result, and fires webhook actions for each outcome.</p>
+            <div class="project-actions">
+              <a href="projects.html#enterprise-automation" class="btn btn-primary btn-sm">
+                View Workflow
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="12" rx="3"/><path d="M8 10h.01M12 10h.01M16 10h.01M9 21l3-4 3 4"/></svg></div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Chatbots</span>
+            <h3>Chatzy — Local AI Chatbots</h3>
+            <p>Privacy-friendly local AI chatbot deployments for organizations that need on-premise LLM assistants.</p>
+            <div class="project-actions">
+              <a href="projects.html" class="btn btn-secondary btn-sm">
+                View Project
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M9.5 12h5M9.5 15.5h5"/></svg></div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Data &amp; Documents</span>
+            <h3>Intelligent Document Processing</h3>
+            <p>Automated document extraction and classification pipelines that cut manual review time significantly.</p>
+            <div class="project-actions">
+              <a href="projects.html" class="btn btn-secondary btn-sm">
+                View Project
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <div class="flex items-center" style="justify-content:center;margin-top:40px;">
+        <a href="projects.html" class="btn btn-secondary">
+          View All Projects
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MARQUEE 2 (reverse) ================= -->
+  <div class="marquee-section" aria-hidden="true">
+    <div class="marquee-track reverse">
+      <span class="marquee-item">GENERATIVE AI <span class="sep">●</span></span>
+      <span class="marquee-item">DIGITAL TRANSFORMATION <span class="sep">●</span></span>
+      <span class="marquee-item">ENTERPRISE AI <span class="sep">●</span></span>
+      <span class="marquee-item">WORKFLOW AUTOMATION <span class="sep">●</span></span>
+      <span class="marquee-item">INTELLIGENT DOCUMENT PROCESSING <span class="sep">●</span></span>
+      <span class="marquee-item">CUSTOMER SUPPORT AI <span class="sep">●</span></span>
+      <!-- duplicate for seamless loop -->
+      <span class="marquee-item">GENERATIVE AI <span class="sep">●</span></span>
+      <span class="marquee-item">DIGITAL TRANSFORMATION <span class="sep">●</span></span>
+      <span class="marquee-item">ENTERPRISE AI <span class="sep">●</span></span>
+      <span class="marquee-item">WORKFLOW AUTOMATION <span class="sep">●</span></span>
+      <span class="marquee-item">INTELLIGENT DOCUMENT PROCESSING <span class="sep">●</span></span>
+      <span class="marquee-item">CUSTOMER SUPPORT AI <span class="sep">●</span></span>
+    </div>
+  </div>
+
+  <!-- ================= TRUSTED / INSTITUTIONS (real, verifiable affiliations — replaces fabricated testimonials) ================= -->
+  <section class="section-tight">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Trusted In</span>
+        <h2>Working across industry and academia.</h2>
+      </div>
+    </div>
+    <div style="overflow:hidden;" aria-hidden="true">
+      <div class="logo-marquee-track">
+        <span class="logo-item"><span class="dot"></span>TechMHA Pakistan</span>
+        <span class="logo-item"><span class="dot"></span>Tech Solutions Pakistan</span>
+        <span class="logo-item"><span class="dot"></span>GCUF</span>
+        <span class="logo-item"><span class="dot"></span>KIPS College</span>
+        <span class="logo-item"><span class="dot"></span>Hussain Group of Academies</span>
+        <span class="logo-item"><span class="dot"></span>KHR Council of AI Research</span>
+        <span class="logo-item"><span class="dot"></span>Superior University Lahore</span>
+        <span class="logo-item"><span class="dot"></span>The University of Lahore</span>
+        <!-- duplicate -->
+        <span class="logo-item"><span class="dot"></span>TechMHA Pakistan</span>
+        <span class="logo-item"><span class="dot"></span>Tech Solutions Pakistan</span>
+        <span class="logo-item"><span class="dot"></span>GCUF</span>
+        <span class="logo-item"><span class="dot"></span>KIPS College</span>
+        <span class="logo-item"><span class="dot"></span>Hussain Group of Academies</span>
+        <span class="logo-item"><span class="dot"></span>KHR Council of AI Research</span>
+        <span class="logo-item"><span class="dot"></span>Superior University Lahore</span>
+        <span class="logo-item"><span class="dot"></span>The University of Lahore</span>
+      </div>
+    </div>
+    <p class="trust-note container">Organizations Muhammad Hassan Ajmal Hashmi has worked with as a founder, advisor, lecturer or department head.</p>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-panel reveal">
+        <span class="eyebrow" style="justify-content:center;">Let's Work Together</span>
+        <h2>Have a workflow, product, or team that could use AI?</h2>
+        <p class="lead">Tell me about it — I'll reply with a clear, practical read on what AI and automation can realistically do for it.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary">
+            Get In Touch
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand" aria-label="TechMHA — Home">
+          <span class="brand-mark"><img src="assets/logo.svg" alt="TechMHA logo"></span>
+          <span class="brand-name">TechMHA</span>
+        </a>
+        <p>AI automation agency building AI agents, LLM chatbots and workflow automation — and training the teams who will run them.</p>
+        <div class="footer-social">
+          <a class="social-btn" href="https://www.linkedin.com/in/muhammadhasaan-ajmal-hashmi-a7602b396" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.2v.01M12.5 17v-4a2.2 2.2 0 0 1 4.4 0v4M12.5 10.5V17"/></svg>
+          </a>
+          <a class="social-btn" href="mailto:hassan.ajmal123@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">AI Workflow Automation</a></li>
+          <li><a href="services.html">AI Agents &amp; Chatbots</a></li>
+          <li><a href="services.html">Enterprise AI Consulting</a></li>
+          <li><a href="services.html">Training &amp; Upskilling</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hassan.ajmal123@gmail.com">hassan.ajmal123@gmail.com</a></li>
+          <li><a href="tel:+923354517844">+92 335 4517844</a></li>
+          <li><span class="text-muted">Lahore, Pakistan</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> TechMHA. All rights reserved.</span>
+      <span>Built with a modern dark design system.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/db.js"></script>
+<script src="js/site-render.js"></script>
+<script src="js/workflow-modal.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
