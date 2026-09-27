@@ -76,3 +76,4 @@ All tokens (colors, spacing, radius, shadows, motion timing) live at the top of 
 - All text colors verified at ≥4.5:1 contrast against every surface they appear on.
 - `prefers-reduced-motion` disables marquees, scroll-reveal transitions and counters.
 - Mobile menu is keyboard-operable (Escape closes it) and uses `aria-expanded`.
+# tech-mha
